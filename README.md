@@ -1,13 +1,13 @@
 Apple GSX PHP Library
 =====================
 
-<p align="left">
+<p align="center">
     <a href="https://github.com/waggingtail-dev/package-apple-gsx"><img alt="GitHub Actions status" src="https://github.com/waggingtail-dev/package-apple-gsx/workflows/apple-gsx-unit-tests/badge.svg"></a>
 </p>
 
 ```php
-
-$token = 'activation-token'; // from https://gsx2-uat.apple.com/gsx/api/login or https://gsx2.apple.com/gsx/api/login when in prod.
+// from https://gsx2-uat.apple.com/gsx/api/login or https://gsx2.apple.com/gsx/api/login when in prod.
+$token = 'activation-token';
 
 $gsx = new \Waggingtail\AppleGsx\AppleGsx($appleId, $token, $shipTo, $soldTo, $caBundlePath, $passPhrase, $operatorUserId, $isUat);
 
@@ -41,7 +41,7 @@ Partner client systems should only invoke the /authenticate/token API once a tok
 Invoking the /authenticate/token API too often – for example, invoking it before every API call, or invoking it every 5 minutes regardless of invalidity – could result in unexpected behavior from GSX, especially when a high rate of invocation is generated as a result.
 ```
 
-In other words, if you have already authenticated and calling an API method you get an `UnauthorizedException` instead,
+In other words, if you have already authenticated and calling an API method throws an `UnauthorizedException` instead,
 call `$gsx->authenticate()->token()` with no parameters or passing the `expired` token,
 this will refresh the token. If you still get an `UnauthorizedException`, you need to get a new activation token and
 pass it to `$gsx->authenticate()->token('activation-token')`.
