@@ -1,8 +1,9 @@
 {
-    "name": "waggingtail/apple-gsx",
+    "name": "waggingtail/package-apple-gsx",
     "description": "Apple GSX PHP implementation.",
     "type": "library",
     "license": "BSD-3-Clause",
+    "version": "0.1.0",
     "authors": [
         {
             "name": "naillizard",
