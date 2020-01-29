@@ -99,7 +99,7 @@
                     array
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_eligibility">eligibility</a>(array $body = [])
+                    <a href="#method_eligibility">eligibility</a>(array $json = [])
         
                                             <p>Returns repair eligibility.</p>                </div>
                 <div class="col-md-2"></div>
@@ -119,7 +119,7 @@
                     array
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_summary">summary</a>(array $body, array $parameters = [&#039;fetchAllRepairs&#039; =&gt; false])
+                    <a href="#method_summary">summary</a>(array $json, array $parameters = [&#039;fetchAllRepairs&#039; =&gt; false])
         
                                             <p>Returns a subset of repair information for up to 50 repairs
 matching the search criteria.</p>                </div>
@@ -130,7 +130,7 @@ matching the search criteria.</p>                </div>
                     array|mixed
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_productDetails">productDetails</a>(array $body, array $parameters = [&#039;activationDetails&#039; =&gt; false])
+                    <a href="#method_productDetails">productDetails</a>(array $json, array $parameters = [&#039;activationDetails&#039; =&gt; false])
         
                                             <p>Returns device warranty and agreement details, activation details, replacement history,
 and product model information for a given serial number.</p>                </div>
@@ -146,7 +146,7 @@ and product model information for a given serial number.</p>                </di
                     <h3 id="method_eligibility">
         <div class="location">at         line 21</div>
         <code>                    array
-    <strong>eligibility</strong>(array $body = [])
+    <strong>eligibility</strong>(array $json = [])
         </code>
     </h3>
     <div class="details">
@@ -161,7 +161,7 @@ and product model information for a given serial number.</p>                </di
                     <table class="table table-condensed">
                     <tr>
                 <td>array</td>
-                <td>$body</td>
+                <td>$json</td>
                 <td></td>
             </tr>
             </table>
@@ -226,7 +226,7 @@ and product model information for a given serial number.</p>                </di
                     <h3 id="method_summary">
         <div class="location">at         line 39</div>
         <code>                    array
-    <strong>summary</strong>(array $body, array $parameters = [&#039;fetchAllRepairs&#039; =&gt; false])
+    <strong>summary</strong>(array $json, array $parameters = [&#039;fetchAllRepairs&#039; =&gt; false])
         </code>
     </h3>
     <div class="details">
@@ -242,7 +242,7 @@ matching the search criteria.</p>                                               
                     <table class="table table-condensed">
                     <tr>
                 <td>array</td>
-                <td>$body</td>
+                <td>$json</td>
                 <td></td>
             </tr>
                     <tr>
@@ -272,7 +272,7 @@ matching the search criteria.</p>                                               
                     <h3 id="method_productDetails">
         <div class="location">at         line 51</div>
         <code>                    array|mixed
-    <strong>productDetails</strong>(array $body, array $parameters = [&#039;activationDetails&#039; =&gt; false])
+    <strong>productDetails</strong>(array $json, array $parameters = [&#039;activationDetails&#039; =&gt; false])
         </code>
     </h3>
     <div class="details">
@@ -288,7 +288,7 @@ and product model information for a given serial number.</p>                    
                     <table class="table table-condensed">
                     <tr>
                 <td>array</td>
-                <td>$body</td>
+                <td>$json</td>
                 <td></td>
             </tr>
                     <tr>
