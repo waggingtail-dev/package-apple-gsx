@@ -7,9 +7,7 @@ use Waggingtail\AppleGsx\Contracts\AuthenticateInterface;
 class Authenticate extends Api implements AuthenticateInterface
 {
     /**
-     * Returns "OK" when apple has configured access for the application.
-     *
-     * @return string
+     * {@inheritdoc}
      */
     public function check()
     {
@@ -17,19 +15,7 @@ class Authenticate extends Api implements AuthenticateInterface
     }
 
     /**
-     * Returns the authentication token.
-     *
-     * This method should initially be called when initialising the library,
-     * with an activation token, effectively swapping the activation token
-     * for an authentication token.
-     *
-     * Whenever a 401 is returned by any api call, this method should
-     * be called again, but this time with the previous authentication token,
-     * effectively renewing the token.
-     *
-     * @param null|string $token An activation token or authentication token.
-     * @return string
-     *
+     * {@inheritdoc}
      */
     public function token($token = null)
     {
@@ -37,10 +23,7 @@ class Authenticate extends Api implements AuthenticateInterface
     }
 
     /**
-     * Closes the API session, invaliding the API token and return "OK".
-     *
-     * @return string
-     *
+     * {@inheritdoc}
      */
     public function end()
     {

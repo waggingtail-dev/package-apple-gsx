@@ -88,7 +88,7 @@ class Config implements ConfigInterface
         $isUat = false
     )
     {
-        $this->setAppleUserId($appleUserId?? self::getEnvVariable('APPLE_GSX_USER_ID'));
+        $this->setAppleUserId($appleUserId);
 
         $this->setToken($token);
 
@@ -101,7 +101,7 @@ class Config implements ConfigInterface
             $passPhrase ?? self::getEnvVariable('APPLE_GSX_CA_BUNDLE_PASS_PHRASE')
         );
 
-        $this->setOperatorUserId($operatorUserId ?? self::getEnvVariable('APPLE_GSX_OPERATOR_ID'));
+        $this->setOperatorUserId($operatorUserId);
 
         $this->setIsUat($isUat);
     }

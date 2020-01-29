@@ -18,7 +18,7 @@ interface RepairInterface
      * @param array $json
      * @return array
      */
-    public function eligibility(array $json = []);
+    public function eligibility(array $json);
 
     /**
      * Returns the details for the given repair.
@@ -32,23 +32,19 @@ interface RepairInterface
      * Returns a subset of repair information for up to 50 repairs
      * matching the search criteria.
      *
-     * @param array $parameters
      * @param array $json
+     * @param bool $fetchAllRepairs
      * @return array
      */
-    public function summary(array $json, array $parameters = [
-        'fetchAllRepairs' => false,
-    ]);
+    public function summary(array $json, bool $fetchAllRepairs);
 
     /**
      * Returns device warranty and agreement details, activation details, replacement history,
      * and product model information for a given serial number.
      *
-     * @param array $parameters
      * @param array $json
+     * @param bool $activationDetails
      * @return array|mixed
      */
-    public function productDetails(array $json, array $parameters = [
-        'activationDetails' => false,
-    ]);
+    public function productDetails(array $json, bool $activationDetails);
 }

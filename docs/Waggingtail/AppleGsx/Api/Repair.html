@@ -238,7 +238,7 @@ the first page (50 records) will be returned.</td>
                     array
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_eligibility">eligibility</a>(array $json = [])
+                    <a href="#method_eligibility">eligibility</a>(array $json)
         
                                             <p>Returns repair eligibility.</p>                </div>
                 <div class="col-md-2"></div>
@@ -258,7 +258,7 @@ the first page (50 records) will be returned.</td>
                     array
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_summary">summary</a>(array $json, array $parameters = [&#039;fetchAllRepairs&#039; =&gt; false])
+                    <a href="#method_summary">summary</a>(array $json, bool $fetchAllRepairs = false)
         
                                             <p>Returns a subset of repair information for up to 50 repairs
 matching the search criteria.</p>                </div>
@@ -269,7 +269,7 @@ matching the search criteria.</p>                </div>
                     array|mixed
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_productDetails">productDetails</a>(array $json, array $parameters = [&#039;activationDetails&#039; =&gt; false])
+                    <a href="#method_productDetails">productDetails</a>(array $json, bool $activationDetails = false)
         
                                             <p>Returns device warranty and agreement details, activation details, replacement history,
 and product model information for a given serial number.</p>                </div>
@@ -651,7 +651,7 @@ and product model information for a given serial number.</p>                </di
                     <h3 id="method_eligibility">
         <div class="location">at         line 20</div>
         <code>                    array
-    <strong>eligibility</strong>(array $json = [])
+    <strong>eligibility</strong>(array $json)
         </code>
     </h3>
     <div class="details">
@@ -731,7 +731,7 @@ and product model information for a given serial number.</p>                </di
                     <h3 id="method_summary">
         <div class="location">at         line 36</div>
         <code>                    array
-    <strong>summary</strong>(array $json, array $parameters = [&#039;fetchAllRepairs&#039; =&gt; false])
+    <strong>summary</strong>(array $json, bool $fetchAllRepairs = false)
         </code>
     </h3>
     <div class="details">
@@ -751,8 +751,8 @@ matching the search criteria.</p>                                               
                 <td></td>
             </tr>
                     <tr>
-                <td>array</td>
-                <td>$parameters</td>
+                <td>bool</td>
+                <td>$fetchAllRepairs</td>
                 <td></td>
             </tr>
             </table>
@@ -775,9 +775,9 @@ matching the search criteria.</p>                                               
             </div>
                     <div class="method-item">
                     <h3 id="method_productDetails">
-        <div class="location">at         line 49</div>
+        <div class="location">at         line 46</div>
         <code>                    array|mixed
-    <strong>productDetails</strong>(array $json, array $parameters = [&#039;activationDetails&#039; =&gt; false])
+    <strong>productDetails</strong>(array $json, bool $activationDetails = false)
         </code>
     </h3>
     <div class="details">
@@ -797,8 +797,8 @@ and product model information for a given serial number.</p>                    
                 <td></td>
             </tr>
                     <tr>
-                <td>array</td>
-                <td>$parameters</td>
+                <td>bool</td>
+                <td>$activationDetails</td>
                 <td></td>
             </tr>
             </table>

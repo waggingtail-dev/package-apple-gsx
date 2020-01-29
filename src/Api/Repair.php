@@ -17,7 +17,7 @@ class Repair extends Api implements RepairInterface
     /**
      * {@inheritdoc}
      */
-    public function eligibility(array $json = [])
+    public function eligibility(array $json)
     {
         return $this->_post("repair/eligibility", $json);
     }
@@ -33,26 +33,20 @@ class Repair extends Api implements RepairInterface
     /**
      * {@inheritdoc}
      */
-    public function summary(
-        array $json,
-        array $parameters = [
-            'fetchAllRepairs' => false,
-        ]
-    )
+    public function summary(array $json, bool $fetchAllRepairs = false)
     {
+        $parameters['fetchAllRepairs'] = $fetchAllRepairs;
+
         return $this->_post("repair/summary", $json, $parameters);
     }
 
     /**
      * {@inheritdoc}
      */
-    public function productDetails(
-        array $json,
-        array $parameters = [
-            'activationDetails' => false,
-        ]
-    )
+    public function productDetails(array $json, bool $activationDetails = false)
     {
+        $parameters['activationDetails'] = $activationDetails;
+
         return $this->_post("repair/product/details", $json, $parameters);
     }
 }
