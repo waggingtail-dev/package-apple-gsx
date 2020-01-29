@@ -1,6 +1,10 @@
 Apple GSX PHP Library
 =====================
 
+<p align="left">
+    <a href="https://github.com/waggingtail-dev/package-apple-gsx"><img alt="GitHub Actions status" src="https://github.com/waggingtail-dev/package-apple-gsx/workflows/apple-gsx-unit-tests/badge.svg"></a>
+</p>
+
 ```php
 $gsx = new \Waggingtail\AppleGsx\AppleGsx($appleId, $shipTo, $soldTo, $caBundlePath, $passPhrase, $operatorUserId, $isUat);
 
