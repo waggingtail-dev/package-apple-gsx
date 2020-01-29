@@ -1,12 +1,18 @@
 Apple GSX PHP Library
 =====================
 
+<p align="left">
+    <a href="https://github.com/waggingtail-dev/package-apple-gsx"><img alt="GitHub Actions status" src="https://github.com/waggingtail-dev/package-apple-gsx/workflows/apple-gsx-unit-tests/badge.svg"></a>
+</p>
+
 ```php
-$gsx = new \Waggingtail\AppleGsx\AppleGsx($appleId, $shipTo, $soldTo, $caBundlePath, $passPhrase, $operatorUserId, $isUat);
+
+$token = 'activation-token'; // from https://gsx2-uat.apple.com/gsx/api/login or https://gsx2.apple.com/gsx/api/login when in prod.
+
+$gsx = new \Waggingtail\AppleGsx\AppleGsx($appleId, $token, $shipTo, $soldTo, $caBundlePath, $passPhrase, $operatorUserId, $isUat);
 
 $gsx->authenticate()->check(); // will return OK if request successful
 
-$token = 'activation-token'; // from https://gsx2-uat.apple.com/gsx/api/login or https://gsx2.apple.com/gsx/api/login when in prod.
 $gsx->authenticate()->token($token); // will return an authentication token
 
 $gsx->repair()->details($repairId);
