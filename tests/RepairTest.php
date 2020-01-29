@@ -25,7 +25,7 @@ class RepairTest extends TestCase
     {
         $response = static::$gsx->repair()->details('DEVICE1');
 
-        $this->assertEquals($response, json_decode(file_get_contents(__DIR__ . '/fixtures/')));
+        $this->assertEquals($response, json_decode(file_get_contents(__DIR__ . '/fixtures/details.json'), true));
     }
 
     /** @test */

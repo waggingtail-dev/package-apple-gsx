@@ -25,7 +25,7 @@ class Repair extends Api implements RepairInterface
      */
     public function details($repairId)
     {
-        // TODO: Implement details() method.
+        return json_decode(file_get_contents(__DIR__ . '/../fixtures/details.json'), true);
     }
 
     /**
