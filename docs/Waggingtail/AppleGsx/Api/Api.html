@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Waggingtail\AppleGsx\Api\Api | Apple GSX API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Waggingtail_AppleGsx_Api_Api" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Apple GSX API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../Waggingtail.html">Waggingtail</a></li><li class="backslash">\</li><li><a href="../../../Waggingtail/AppleGsx.html">AppleGsx</a></li><li class="backslash">\</li><li><a href="../../../Waggingtail/AppleGsx/Api.html">Api</a></li><li class="backslash">\</li><li>Api</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Api
+                
+        </h1>
+    </div>
+
+    <p>abstract     class
+    <strong>Api</strong>        implements
+        <a href="../../../Waggingtail/AppleGsx/Contracts/ApiInterface.html"><abbr title="Waggingtail\AppleGsx\Contracts\ApiInterface">ApiInterface</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Abstract Class Api.</p>                                </div>
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_config">
+                                        protected                                        <a href="../../../Waggingtail/AppleGsx/ConfigInterface.html"><abbr title="Waggingtail\AppleGsx\ConfigInterface">ConfigInterface</abbr></a>
+                </td>
+                <td>$config</td>
+                <td class="last">The Config instance.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_pageSize">
+                                        protected                                        int
+                </td>
+                <td>$pageSize</td>
+                <td class="last">Represents how many results should be returned, there is a max limit of 50.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_pageNumber">
+                                        protected                                        int
+                </td>
+                <td>$pageNumber</td>
+                <td class="last">Represents the page number that will be returned. If no value is provided
+the first page (50 records) will be returned.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_defaultHeaders">
+                                        protected                                        array
+                </td>
+                <td>$defaultHeaders</td>
+                <td class="last">The default headers to be sent with every request.</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../../Waggingtail/AppleGsx/ConfigInterface.html"><abbr title="Waggingtail\AppleGsx\ConfigInterface">ConfigInterface</abbr></a> $config)
+        
+                                            <p>Api constructor.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPageNumber">getPageNumber</a>()
+        
+                                            <p>Returns the page number.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Waggingtail/AppleGsx/Contracts/ApiInterface.html"><abbr title="Waggingtail\AppleGsx\Contracts\ApiInterface">ApiInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setPageNumber">setPageNumber</a>(int $pageNumber = 1)
+        
+                                            <p>Sets the page number.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/stdClass">stdClass</a>|string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method__get">_get</a>(string $url = null, array $parameters = [])
+        
+                                            <p>Send a GET request.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPageSize">getPageSize</a>()
+        
+                                            <p>Returns the number of items to return per page.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Waggingtail/AppleGsx/Contracts/ApiInterface.html"><abbr title="Waggingtail\AppleGsx\Contracts\ApiInterface">ApiInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setPageSize">setPageSize</a>(int $pageSize = 50)
+        
+                                            <p>Sets the number of items to return per page.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="GuzzleHttp\Client">Client</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getClient">getClient</a>()
+        
+                                            <p>Returns an Http client instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDefaultHeaders">getDefaultHeaders</a>()
+        
+                                            <p>Gets the default headers that are sent with every request.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Waggingtail/AppleGsx/Contracts/ApiInterface.html"><abbr title="Waggingtail\AppleGsx\Contracts\ApiInterface">ApiInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDefaultHeaders">setDefaultHeaders</a>(array $headers = [])
+        
+                                            <p>Sets the default headers that are sent with every request.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/stdClass">stdClass</a>|string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method__post">_post</a>(string $url = null, array $json = [], array $parameters = [])
+        
+                                            <p>Send a POST request.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at         line 55</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../../Waggingtail/AppleGsx/ConfigInterface.html"><abbr title="Waggingtail\AppleGsx\ConfigInterface">ConfigInterface</abbr></a> $config)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Api constructor.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Waggingtail/AppleGsx/ConfigInterface.html"><abbr title="Waggingtail\AppleGsx\ConfigInterface">ConfigInterface</abbr></a></td>
+                <td>$config</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPageNumber">
+        <div class="location">at         line 63</div>
+        <code>                    int
+    <strong>getPageNumber</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the page number.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td>Current page number.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPageNumber">
+        <div class="location">at         line 71</div>
+        <code>                    <a href="../../../Waggingtail/AppleGsx/Contracts/ApiInterface.html"><abbr title="Waggingtail\AppleGsx\Contracts\ApiInterface">ApiInterface</abbr></a>
+    <strong>setPageNumber</strong>(int $pageNumber = 1)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the page number.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$pageNumber</td>
+                <td>Represents the page to return, if not set, defaults to first page.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Waggingtail/AppleGsx/Contracts/ApiInterface.html"><abbr title="Waggingtail\AppleGsx\Contracts\ApiInterface">ApiInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__get">
+        <div class="location">at         line 81</div>
+        <code>                    <a target="_blank" href="http://php.net/stdClass">stdClass</a>|string
+    <strong>_get</strong>(string $url = null, array $parameters = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Send a GET request.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>Request Url.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td>Request query parameters.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/stdClass">stdClass</a>|string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Waggingtail/AppleGsx/Exception/AppleGsxException.html"><abbr title="Waggingtail\AppleGsx\Exception\AppleGsxException">AppleGsxException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPageSize">
+        <div class="location">at         line 93</div>
+        <code>                    int
+    <strong>getPageSize</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the number of items to return per page.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td>Number of items per page.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPageSize">
+        <div class="location">at         line 101</div>
+        <code>                    <a href="../../../Waggingtail/AppleGsx/Contracts/ApiInterface.html"><abbr title="Waggingtail\AppleGsx\Contracts\ApiInterface">ApiInterface</abbr></a>
+    <strong>setPageSize</strong>(int $pageSize = 50)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the number of items to return per page.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$pageSize</td>
+                <td>How many results per page, if not set, defaults to 50.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Waggingtail/AppleGsx/Contracts/ApiInterface.html"><abbr title="Waggingtail\AppleGsx\Contracts\ApiInterface">ApiInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getClient">
+        <div class="location">at         line 149</div>
+        <code>                    <abbr title="GuzzleHttp\Client">Client</abbr>
+    <strong>getClient</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns an Http client instance.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="GuzzleHttp\Client">Client</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultHeaders">
+        <div class="location">at         line 161</div>
+        <code>                    array
+    <strong>getDefaultHeaders</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the default headers that are sent with every request.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>Default headers.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDefaultHeaders">
+        <div class="location">at         line 169</div>
+        <code>                    <a href="../../../Waggingtail/AppleGsx/Contracts/ApiInterface.html"><abbr title="Waggingtail\AppleGsx\Contracts\ApiInterface">ApiInterface</abbr></a>
+    <strong>setDefaultHeaders</strong>(array $headers = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the default headers that are sent with every request.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td>Null or '' values will be removed from default headers.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Waggingtail/AppleGsx/Contracts/ApiInterface.html"><abbr title="Waggingtail\AppleGsx\Contracts\ApiInterface">ApiInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__post">
+        <div class="location">at         line 207</div>
+        <code>                    <a target="_blank" href="http://php.net/stdClass">stdClass</a>|string
+    <strong>_post</strong>(string $url = null, array $json = [], array $parameters = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Send a POST request.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>Request Url.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$json</td>
+                <td>Request body.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td>Request query parameters.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/stdClass">stdClass</a>|string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Waggingtail/AppleGsx/Exception/AppleGsxException.html"><abbr title="Waggingtail\AppleGsx\Exception\AppleGsxException">AppleGsxException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,256 @@
+{
+    "acPlusIncidentConsumed": true,
+    "escalations": [
+        {
+            "id": "string",
+            "type": "string"
+        }
+    ],
+    "coverageStatusDescription": "string",
+    "notes": [
+        {
+            "type": "CUSTOMER_INTAKE_NOTES",
+            "content": "string"
+        }
+    ],
+    "attachments": [
+        {
+            "name": "string",
+            "downloadUrl": "string",
+            "id": "string"
+        }
+    ],
+    "repairTypeCode": "NRS",
+    "slaGroupDescription": "string",
+    "repairClassification": "SINGLE",
+    "coverageStatusCode": "string",
+    "questionDetails": [
+        {
+            "templateId": "string",
+            "trees": [
+                {
+                    "treeId": "string",
+                    "questions": [
+                        {
+                            "questionId": "string",
+                            "answers": [
+                                {
+                                    "answerId": "string",
+                                    "answerPhrase": "string",
+                                    "questions": [
+                                        null
+                                    ]
+                                }
+                            ],
+                            "questionPhrase": "string",
+                            "optional": true
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "repairId": "REPAIR_1",
+    "serviceNotificationNumber": "string",
+    "coverageOption": "string",
+    "repairTypeDescription": "string",
+    "referenceNumber": "string",
+    "repairStatusCode": "string",
+    "repairStatusDescription": "string",
+    "price": {
+        "totalAmount": "string",
+        "taxDetails": {
+            "ipiTax": "string",
+            "cofinsTax": "string",
+            "issTax": "string",
+            "icmsTax": "string",
+            "icmsStTax": "string",
+            "pisTax": "string"
+        },
+        "tax": "string"
+    },
+    "csCode": "string",
+    "consumerLaw": "RFD",
+    "technicianId": "string",
+    "shipment": {
+        "deviceShipped": true,
+        "trackingNumber": "string"
+    },
+    "loaners": [
+        {
+            "sequenceNumber": "string",
+            "returnOrderNumber": "string",
+            "carrierUrl": "string",
+            "vmiStatus": "string",
+            "description": "string",
+            "netPrice": "string",
+            "fromConsignedStock": true,
+            "componentIssue": {
+                "componentCode": "string",
+                "reproducibility": "A",
+                "issueCode": "string"
+            },
+            "dispositionCode": "string",
+            "returnPartReceivedDate": "2020-01-29T03:48:40.668Z",
+            "carrierName": "string",
+            "returnStatusCode": "string",
+            "returnTrackingNumber": "string",
+            "carrierCode": "string",
+            "partNumber": "string",
+            "currency": "string",
+            "device": {
+                "identifiers": {
+                    "meid": "string",
+                    "imei2": "string",
+                    "serial": "string",
+                    "imei": "string"
+                }
+            },
+            "serialized": true
+        }
+    ],
+    "repairCreatedOnDate": "2020-01-29T03:48:40.668Z",
+    "purchaseOrderNumber": "string",
+    "componentIssues": [
+        {
+            "componentCode": "string",
+            "reproducibility": "A",
+            "priority": 0,
+            "type": "CUST",
+            "issueCode": "string",
+            "order": 0
+        }
+    ],
+    "addressCosmeticDamage": true,
+    "parts": [
+        {
+            "kbbDeviceDetail": {
+                "identifiers": {
+                    "meid": "string",
+                    "imei2": "string",
+                    "serial": "string",
+                    "imei": "string"
+                }
+            },
+            "partUsed": "string",
+            "kgbDeviceDetail": {
+                "identifiers": {
+                    "meid": "string",
+                    "imei2": "string",
+                    "serial": "string",
+                    "imei": "string"
+                }
+            },
+            "orderId": "string",
+            "carrierUrl": "string",
+            "description": "string",
+            "netPrice": "string",
+            "type": "string",
+            "coverageOption": "string",
+            "number": "string",
+            "carrierName": "string",
+            "returnStatusCode": "string",
+            "currency": "string",
+            "deliveryTrackingNumber": "string",
+            "deliveryDate": "2020-01-29T03:48:40.668Z",
+            "pricingOption": "string",
+            "coverageDescription": "string",
+            "deliveryNumber": "string",
+            "coverageCode": "string",
+            "serialized": true,
+            "orderStatusDescription": "string",
+            "returnOrderNumber": "string",
+            "sequenceNumber": "string",
+            "fromConsignedStock": true,
+            "componentIssue": {
+                "componentCode": "string",
+                "reproducibility": "A",
+                "issueCode": "string",
+                "previousCompTIA": "string"
+            },
+            "billable": true,
+            "returnPartReceivedDate": "2020-01-29T03:48:40.668Z",
+            "returnTrackingNumber": "string",
+            "carrierCode": "string",
+            "orderStatusCode": "string",
+            "orderStatusDate": "2020-01-29T03:48:40.669Z"
+        }
+    ],
+    "messages": [
+        {
+            "type": "string",
+            "message": "string"
+        }
+    ],
+    "invoiceAvailable": true,
+    "device": {
+        "purchaseDate": "2020-01-29T03:48:40.669Z",
+        "configuration": {
+            "hardDiskSize": "string",
+            "osVersion": "string",
+            "ramSize": "string"
+        },
+        "identifiers": {
+            "meid": "string",
+            "imei2": "string",
+            "serial": "string",
+            "imei": "string"
+        },
+        "configDescription": "string",
+        "slaGroup": "string",
+        "productName": "string"
+    },
+    "account": {
+        "assignedPartnerName": "string",
+        "assignedShipTo": "string",
+        "soldTo": "string",
+        "productLocationAddress": {
+            "city": "string",
+            "street": "string",
+            "companyName": "string",
+            "postalCode": "string",
+            "county": "string",
+            "stateCode": "string",
+            "countryName": "string",
+            "vendorName": "string"
+        },
+        "vendorAddress": {
+            "city": "string",
+            "street": "string",
+            "companyName": "string",
+            "postalCode": "string",
+            "county": "string",
+            "stateCode": "string",
+            "countryName": "string",
+            "vendorName": "string"
+        },
+        "shipTo": "string"
+    },
+    "customer": {
+        "firstName": "string",
+        "lastName": "string",
+        "primaryPhone": "string",
+        "emailAddress": "string",
+        "middleInitial": "string",
+        "address": [
+            {
+                "line4": "string",
+                "city": "string",
+                "street": "string",
+                "countryCode": "string",
+                "postalCode": "string",
+                "county": "string",
+                "stateCode": "string",
+                "type": "string",
+                "line3": "string",
+                "line2": "string",
+                "line1": "string"
+            }
+        ],
+        "zone": "string",
+        "companyName": "string",
+        "type": "CONSUMER",
+        "secondaryContact": "string",
+        "secondaryPhone": "string"
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "device": {
+        "identifiers": {
+            "serial": "DNQXGDQ8KPG4"
+        },
+        "productDescription": "iPhone XS",
+        "loaner": false,
+        "consumerLawInfo": [
+            {
+                "serviceType": "OPT_IN",
+                "popRequired": false
+            },
+            {
+                "serviceType": "OPT_OUT",
+                "popRequired": false
+            }
+        ],
+        "productLine": "505753",
+        "configCode": "KPG4",
+        "configDescription": "IPHONE XS,ROW,256GB,SPACE GRAY",
+        "soldToName": "BRIGHTSTAR NZ LIMITED",
+        "warrantyInfo": {
+            "warrantyStatusCode": "OO",
+            "warrantyStatusDescription": "Out Of Warranty (No Coverage)",
+            "daysRemaining": 0,
+            "purchaseDate": "2019-01-17T00:00:00Z",
+            "purchaseCountry": "NZL",
+            "registrationDate": "2019-01-16T00:00:00Z",
+            "onsiteCoverage": false,
+            "laborCovered": false,
+            "limitedWarranty": false,
+            "partCovered": false,
+            "personalized": false
+        },
+        "messages": [
+            {
+                "type": "CONSUMERLAW",
+                "message": "This product is not eligible for coverage under local consumer law regulations as it was originally purchased in a different country/region."
+            }
+        ]
+    }
+}

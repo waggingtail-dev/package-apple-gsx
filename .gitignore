@@ -1,0 +1,5 @@
+/cache
+/vendor
+/.idea
+.phpunit.result.cache
+.DS_Store

@@ -1,0 +1,32 @@
+{
+    "totalNumberOfRecords": 1,
+    "repairs": [
+        {
+            "repairType": "CIN",
+            "repairId": "REPAIR_1",
+            "repairStatus": "SCOM",
+            "repairStatusDescription": "Closed and completed",
+            "repairCreateDate": "2019-07-10T00:01:03Z",
+            "purchaseOrderNumber": "string",
+            "customer": {
+                "firstName": "string",
+                "lastName": "string"
+            },
+            "componentIssues": [
+                {
+                    "componentCode": "26099",
+                    "issueCode": "IP044",
+                    "order": 1,
+                    "priority": 1,
+                    "type": "TECH"
+                }
+            ],
+            "parts": [
+                {
+                    "number": "661-05421",
+                    "description": "Battery, iPhone 7"
+                }
+            ]
+        }
+    ]
+}

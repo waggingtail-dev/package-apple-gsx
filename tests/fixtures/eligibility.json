@@ -1,0 +1,57 @@
+{
+    "eligibilityDetails": {
+        "outcome": [
+            {
+                "reasons": [
+                    {
+                        "type": "REPAIR_TYPE",
+                        "repairOptions": [
+                            {
+                                "option": "CIN",
+                                "priority": 1
+                            },
+                            {
+                                "option": "CINR",
+                                "priority": 2
+                            },
+                            {
+                                "option": "CRBR",
+                                "priority": 3
+                            },
+                            {
+                                "option": "WUMS",
+                                "priority": 4
+                            },
+                            {
+                                "option": "WUMC",
+                                "priority": 5
+                            },
+                            {
+                                "option": "SVNR",
+                                "priority": 6,
+                                "subOption": "LUA"
+                            },
+                            {
+                                "option": "SVNR",
+                                "priority": 7,
+                                "subOption": "NTF"
+                            },
+                            {
+                                "option": "SVNR",
+                                "priority": 8,
+                                "subOption": "SRC"
+                            },
+                            {
+                                "option": "INON",
+                                "priority": 9
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "coverageCode": "OO",
+        "coverageDescription": "Out Of Warranty (No Coverage)",
+        "technicianMandatory": false
+    }
+}
