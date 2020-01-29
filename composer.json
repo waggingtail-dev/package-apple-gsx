@@ -1,5 +1,5 @@
 {
-    "name": "waggingtail/package-apple-gsx",
+    "name": "waggingtail-dev/package-apple-gsx",
     "description": "Apple GSX PHP implementation.",
     "type": "library",
     "license": "BSD-3-Clause",
