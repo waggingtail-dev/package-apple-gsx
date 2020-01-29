@@ -17,6 +17,7 @@ class TestCase extends BaseTestCase
     {
         static::$gsx = new AppleGsx(
             getenv('APPLE_GSX_USER_ID'),
+            'activation-token',
             getenv('APPLE_GSX_SHIP_TO'),
             getenv('APPLE_GSX_SOLD_TO'),
             __DIR__ . '/data/ca-bundle.pem',

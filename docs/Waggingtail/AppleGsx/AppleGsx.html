@@ -111,7 +111,7 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___construct">__construct</a>(string $appleUserId, string $shipTo, string $soldTo, string $caBundlePath, null|string $passPhrase = null, null|string|int $operatorUserId = null, bool $isUat = false)
+                    <a href="#method___construct">__construct</a>(string $appleUserId, string $token, string $shipTo, string $soldTo, string $caBundlePath, null|string $passPhrase = null, null|string|int $operatorUserId = null, bool $isUat = false)
         
                                             <p>AppleGsx constructor.</p>                </div>
                 <div class="col-md-2"></div>
@@ -146,7 +146,7 @@
                     <h3 id="method___construct">
         <div class="location">at         line 23</div>
         <code>                    
-    <strong>__construct</strong>(string $appleUserId, string $shipTo, string $soldTo, string $caBundlePath, null|string $passPhrase = null, null|string|int $operatorUserId = null, bool $isUat = false)
+    <strong>__construct</strong>(string $appleUserId, string $token, string $shipTo, string $soldTo, string $caBundlePath, null|string $passPhrase = null, null|string|int $operatorUserId = null, bool $isUat = false)
         </code>
     </h3>
     <div class="details">
@@ -163,6 +163,11 @@
                 <td>string</td>
                 <td>$appleUserId</td>
                 <td>Apple user email.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$token</td>
+                <td>Activation or Authentication token.</td>
             </tr>
                     <tr>
                 <td>string</td>
@@ -205,7 +210,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method___call">
-        <div class="location">at         line 45</div>
+        <div class="location">at         line 46</div>
         <code>                    <a href="../../Waggingtail/AppleGsx/Contracts/ApiInterface.html"><abbr title="Waggingtail\AppleGsx\Contracts\ApiInterface">ApiInterface</abbr></a>
     <strong>__call</strong>(string $name, array $arguments = [])
         </code>
@@ -259,7 +264,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getApiInstance">
-        <div class="location">at         line 59</div>
+        <div class="location">at         line 60</div>
         <code>                    <a href="../../Waggingtail/AppleGsx/Contracts/ApiInterface.html"><abbr title="Waggingtail\AppleGsx\Contracts\ApiInterface">ApiInterface</abbr></a>
     <strong>getApiInstance</strong>(string $name)
         </code>

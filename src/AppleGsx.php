@@ -22,6 +22,7 @@ class AppleGsx implements AppleGsxInterface
      */
     public function __construct(
         $appleUserId,
+        $token,
         $shipTo,
         $soldTo,
         $caBundlePath,
@@ -30,7 +31,7 @@ class AppleGsx implements AppleGsxInterface
         $isUat = false
     )
     {
-        $this->config = new Config($appleUserId, $shipTo, $soldTo, $caBundlePath, $passPhrase, $operatorUserId, $isUat);
+        $this->config = new Config($appleUserId, $token, $shipTo, $soldTo, $caBundlePath, $passPhrase, $operatorUserId, $isUat);
     }
 
     /**

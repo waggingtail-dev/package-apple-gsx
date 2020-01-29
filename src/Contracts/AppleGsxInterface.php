@@ -16,6 +16,7 @@ interface AppleGsxInterface
      * AppleGsx constructor.
      *
      * @param string $appleUserId Apple user email.
+     * @param string $token Activation or Authentication token.
      * @param string $shipTo The value for X-Apple-ShipTo header.
      * @param string $soldTo The value for X-Apple-SoldTo header.
      * @param string $caBundlePath The path to the client certificate.
@@ -23,5 +24,13 @@ interface AppleGsxInterface
      * @param null|string|int $operatorUserId [optional] The operator user id for tracking.
      * @param bool $isUat [optional] True for GSX (UAT) environment, defaults to false (production).
      */
-    public function __construct($appleUserId, $shipTo, $soldTo, $caBundlePath, $passPhrase = null, $operatorUserId = null, $isUat = false);
+    public function __construct(
+        $appleUserId,
+        $token,
+        $shipTo,
+        $soldTo,
+        $caBundlePath,
+        $passPhrase = null,
+        $operatorUserId = null,
+        $isUat = false);
 }

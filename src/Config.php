@@ -79,6 +79,7 @@ class Config implements ConfigInterface
 
     public function __construct(
         $appleUserId,
+        $token,
         $shipTo,
         $soldTo,
         $caBundlePath,
@@ -88,6 +89,8 @@ class Config implements ConfigInterface
     )
     {
         $this->setAppleUserId($appleUserId?? self::getEnvVariable('APPLE_GSX_USER_ID'));
+
+        $this->setToken($token);
 
         $this->setShipTo($shipTo ?? self::getEnvVariable('APPLE_GSX_SHIP_TO'));
 

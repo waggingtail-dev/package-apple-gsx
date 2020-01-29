@@ -16,6 +16,7 @@ interface ConfigInterface
      * Config constructor.
      *
      * @param string $appleUserId The apple user email to use for authentication.
+     * @param string $token Activation or Authentication token.
      * @param string $shipTo The value for X-Apple-ShipTo header.
      * @param string $soldTo The value for X-Apple-SoldTo header.
      * @param string $caBundlePath The path to the client certificate.
@@ -25,6 +26,7 @@ interface ConfigInterface
      */
     public function __construct(
         $appleUserId,
+        $token,
         $shipTo,
         $soldTo,
         $caBundlePath,
