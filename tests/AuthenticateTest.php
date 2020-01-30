@@ -19,6 +19,6 @@ class AuthenticateTest extends TestCase
     /** @test */
     public function it_returns_an_authentication_token()
     {
-        $this->assertEquals('authentication-token', static::$gsx->authenticate()->token());
+        $this->assertEquals('authentication-token', static::$gsx->authenticate()->token('activation-token'));
     }
 }
