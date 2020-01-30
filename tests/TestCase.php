@@ -16,14 +16,16 @@ class TestCase extends BaseTestCase
     public static function setUpBeforeClass(): void
     {
         static::$gsx = new AppleGsx(
-            getenv('APPLE_GSX_USER_ID'),
-            'activation-token',
             getenv('APPLE_GSX_SHIP_TO'),
             getenv('APPLE_GSX_SOLD_TO'),
             __DIR__ . '/data/ca-bundle.pem',
-            '012345',
-            null,
-            true
+            '012345'
         );
+
+        $config = static::$gsx->getConfig();
+
+        $config->useUat()
+            ->setAppleUserId('appleid@sample.com')
+            ->setToken('authentication-token');
     }
 }

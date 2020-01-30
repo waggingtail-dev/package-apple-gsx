@@ -2,6 +2,8 @@
 
 namespace Waggingtail\AppleGsx\Contracts;
 
+use Waggingtail\AppleGsx\ConfigInterface;
+
 /**
  * AppleGsx.
  *
@@ -15,22 +17,29 @@ interface AppleGsxInterface
     /**
      * AppleGsx constructor.
      *
-     * @param string $appleUserId Apple user email.
-     * @param string $token Activation or Authentication token.
-     * @param string $shipTo The value for X-Apple-ShipTo header.
      * @param string $soldTo The value for X-Apple-SoldTo header.
+     * @param string $shipTo The value for X-Apple-ShipTo header.
      * @param string $caBundlePath The path to the client certificate.
      * @param null|string $passPhrase [optional] The passphrase for the client certificate.
-     * @param null|string|int $operatorUserId [optional] The operator user id for tracking.
-     * @param bool $isUat [optional] True for GSX (UAT) environment, defaults to false (production).
      */
     public function __construct(
-        $appleUserId,
-        $token,
-        $shipTo,
         $soldTo,
+        $shipTo,
         $caBundlePath,
-        $passPhrase = null,
-        $operatorUserId = null,
-        $isUat = false);
+        $passPhrase = null);
+
+    /**
+     * Get the Config instance.
+     *
+     * @return AppleGsxInterface
+     */
+    public function getConfig();
+
+    /**
+     * Set the Config instance.
+     *
+     * @param ConfigInterface $config
+     * @return AppleGsxInterface
+     */
+    public function setConfig(ConfigInterface $config);
 }

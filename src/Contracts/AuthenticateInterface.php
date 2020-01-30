@@ -2,6 +2,7 @@
 
 namespace Waggingtail\AppleGsx\Contracts;
 
+use Waggingtail\AppleGsx\Exception\ForbiddenException;
 use Waggingtail\AppleGsx\Exception\UnauthorizedException;
 
 /**
@@ -30,16 +31,17 @@ interface AuthenticateInterface
      * with an activation token, effectively swapping the activation token
      * for an authentication token.
      *
-     * Whenever a 401 is returned by any api call, this method should
-     * be called again, but this time with the previous authentication token,
+     * When UnauthorizedException is thrown by any api call, this method should
+     * be called again, but this time with the previous authentication expired token,
      * effectively renewing the token.
      *
-     * @param null|string $token An activation token or authentication token.
+     * @param string $token An activation token or an expired auth token.
      * @throws UnauthorizedException
+     * @throws ForbiddenException
      *
      * @return string
      */
-    public function token($token = null);
+    public function token($token);
 
     /**
      * Closes the API session, invaliding the API token and return "OK".

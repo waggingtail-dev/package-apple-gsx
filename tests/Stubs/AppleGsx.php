@@ -17,17 +17,31 @@ class AppleGsx implements AppleGsxInterface
      * {@inheritdoc}
      */
     public function __construct(
-        $appleUserId,
-        $token,
-        $shipTo,
         $soldTo,
+        $shipTo,
         $caBundlePath,
-        $passPhrase = null,
-        $operatorUserId = null,
-        $isUat = true
+        $passPhrase = null
     )
     {
-        $this->config = new Config($appleUserId, $token, $shipTo, $soldTo, $caBundlePath, $passPhrase, $operatorUserId, $isUat);
+        $this->config = new Config($soldTo, $shipTo, $caBundlePath, $passPhrase);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getConfig()
+    {
+        return $this->config;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setConfig(ConfigInterface $config)
+    {
+        $this->config = $config;
+
+        return $this;
     }
 
     public function authenticate()

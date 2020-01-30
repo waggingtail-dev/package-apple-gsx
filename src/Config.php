@@ -77,46 +77,19 @@ class Config implements ConfigInterface
      */
     protected $isUat;
 
-    public function __construct(
-        $appleUserId,
-        $token,
-        $shipTo,
-        $soldTo,
-        $caBundlePath,
-        $passPhrase = null,
-        $operatorUserId = null,
-        $isUat = false
-    )
+    /**
+     * {@inheritdoc}
+     */
+    public function __construct($shipTo, $soldTo, $caBundlePath, $passPhrase = null)
     {
-        $this->setAppleUserId($appleUserId);
+        $this->setShipTo($shipTo);
 
-        $this->setToken($token);
-
-        $this->setShipTo($shipTo ?? self::getEnvVariable('APPLE_GSX_SHIP_TO'));
-
-        $this->setSoldTo($soldTo ?? self::getEnvVariable('APPLE_GSX_SOLD_TO'));
+        $this->setSoldTo($soldTo);
 
         $this->setCaBundlePath(
-            $caBundlePath ?? self::getEnvVariable('APPLE_GSX_CA_BUNDLE_PATH'),
-            $passPhrase ?? self::getEnvVariable('APPLE_GSX_CA_BUNDLE_PASS_PHRASE')
+            $caBundlePath,
+            $passPhrase
         );
-
-        $this->setOperatorUserId($operatorUserId);
-
-        $this->setIsUat($isUat);
-    }
-
-    private static function getEnvVariable($name, $default = null)
-    {
-        if (isset($_SERVER[$name])) {
-            return (string)$_SERVER[$name];
-        }
-
-        if (PHP_SAPI === 'cli' && ($value = getenv($name)) !== false) {
-            return (string)$value;
-        }
-
-        return $default;
     }
 
     /**
@@ -270,7 +243,7 @@ class Config implements ConfigInterface
     /**
      * {@inheritdoc}
      */
-    public function getIsUat(): bool
+    public function isUat(): bool
     {
         return $this->isUat;
     }
@@ -278,9 +251,9 @@ class Config implements ConfigInterface
     /**
      * {@inheritdoc}
      */
-    public function setIsUat(bool $isUat)
+    public function useUat()
     {
-        $this->isUat = $isUat;
+        $this->isUat = true;
 
         return $this;
     }

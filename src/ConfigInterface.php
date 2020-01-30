@@ -15,24 +15,16 @@ interface ConfigInterface
     /**
      * Config constructor.
      *
-     * @param string $appleUserId The apple user email to use for authentication.
-     * @param string $token Activation or Authentication token.
      * @param string $shipTo The value for X-Apple-ShipTo header.
      * @param string $soldTo The value for X-Apple-SoldTo header.
      * @param string $caBundlePath The path to the client certificate.
      * @param null|string $passPhrase [optional] The passphrase for the client certificate.
-     * @param null|string|int $operatorUserId [optional] The operator user id for tracking.
-     * @param bool $isUat [optional] True for GSX (UAT) environment, defaults to false (production).
      */
     public function __construct(
-        $appleUserId,
-        $token,
         $shipTo,
         $soldTo,
         $caBundlePath,
-        $passPhrase = null,
-        $operatorUserId = null,
-        $isUat = false
+        $passPhrase = null
     );
 
     /**
@@ -145,13 +137,12 @@ interface ConfigInterface
      *
      * @return bool
      */
-    public function getIsUat(): bool;
+    public function isUat(): bool;
 
     /**
      * Set the environment to UAT.
      *
-     * @param bool $isUat True for GSX UAT environment, false for production.
      * @return ConfigInterface
      */
-    public function setIsUat(bool $isUat);
+    public function useUat();
 }

@@ -7,6 +7,7 @@ use GuzzleHttp\Exception\ClientException;
 use Waggingtail\AppleGsx\ConfigInterface;
 use Waggingtail\AppleGsx\Contracts\ApiInterface;
 use Waggingtail\AppleGsx\Exception\Handler;
+use Waggingtail\AppleGsx\Exception\UnauthorizedException;
 use Waggingtail\AppleGsx\Utility;
 
 /**

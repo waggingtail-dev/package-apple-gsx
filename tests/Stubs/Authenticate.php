@@ -17,7 +17,7 @@ class Authenticate extends Api implements AuthenticateInterface
     /**
      * {@inheritdoc}
      */
-    public function token($token = null)
+    public function token($token)
     {
         return 'authentication-token';
     }

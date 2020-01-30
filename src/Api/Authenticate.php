@@ -31,7 +31,7 @@ class Authenticate extends Api implements AuthenticateInterface
     /**
      * {@inheritdoc}
      */
-    public function token($token = null)
+    public function token($token)
     {
         $this->setDefaultHeaders([
             'X-Apple-Auth-Token' => null,

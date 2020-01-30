@@ -21,17 +21,31 @@ class AppleGsx implements AppleGsxInterface
      * {@inheritdoc}
      */
     public function __construct(
-        $appleUserId,
-        $token,
-        $shipTo,
         $soldTo,
+        $shipTo,
         $caBundlePath,
-        $passPhrase = null,
-        $operatorUserId = null,
-        $isUat = false
+        $passPhrase = null
     )
     {
-        $this->config = new Config($appleUserId, $token, $shipTo, $soldTo, $caBundlePath, $passPhrase, $operatorUserId, $isUat);
+        $this->config = new Config($soldTo, $shipTo, $caBundlePath, $passPhrase);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getConfig()
+    {
+        return $this->config;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setConfig(ConfigInterface $config)
+    {
+        $this->config = $config;
+
+        return $this;
     }
 
     /**
@@ -57,7 +71,7 @@ class AppleGsx implements AppleGsxInterface
      *
      * @return ApiInterface
      */
-    public function getApiInstance($name)
+    protected function getApiInstance($name)
     {
         $class = "\\Waggingtail\\AppleGsx\\Api\\" . ucwords($name);
 
