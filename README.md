@@ -2,7 +2,7 @@ Apple GSX PHP Library
 =====================
 
 <p align="center">
-    <a href="https://github.com/waggingtail-dev/package-apple-gsx"><img alt="GitHub Actions status" src="https://github.com/waggingtail-dev/package-apple-gsx/workflows/apple-gsx-unit-tests/badge.svg"></a>
+    <a href="https://github.com/waggingtail-dev/package-apple-gsx"><img alt="GitHub Actions status" src="https://github.com/waggingtail-dev/package-apple-gsx/workflows/ci-cd/badge.svg"></a>
 </p>
 
 ## Authentication
@@ -52,28 +52,35 @@ try {
     // do something e.g. "notify an administrator" something wrong with Apple setup
 }
 
-// initially this shoudl be an activation token
-// from https://gsx2[-uat].apple.com/gsx/api/login
-$token = 'activation-token';
+// Apple's authentication flow is the definition of janky.
+// first you need to get an activation token from `https://gsx2[-uat].apple.com/gsx/api/login
+$activationToken = 'activation-token';
 
 // when given an activation token, will return a new authentication token
 // when given an expired/current token, will refresh the token
+// CALL THIS ONCE and store the `authentication token` e.g. "against the user"
 try {
     // will return an authentication token
-    $authToken = $gsx->authenticate()->token($token);
+    $authToken = $gsx->authenticate()->token($activationToken);
+    
+    // example storing the token
+    Auth::user()->saveAppleGsxToken($authToken);
 
     // or throw an `UnauthorizedException` if `token` is invalid
 } catch (UnauthorizedException $e) {
-    // if previously authenticated pass the old `authentication token`
-    // otherwise a new `activation token` is required
-    $authToken = $gsx->authenticate()->token($token);
+    // some logic to handle the error
 }
 
 // remember to wrap all api calls with a try/catch and catch `UnauthorizedException`
 // to detect if the token has expired, then call `authenticate->token($oldToken) to refresh
 try {
     $gsx->repair()->details($repairId);
+    // if UnauthorizedException thrown, authenticate with the current/expired token
 } catch (UnauthorizedException $e) {
-    $authToken = $gsx->authenticate()->token($oldToken);
+    // example retrieving the current token
+    $currentToken = Auth::user()->getAppleGsxToken();
+
+    // if this fails, you'll need a new activation-token
+    $authToken = $gsx->authenticate()->token($currentToken);
 }
 ```
