@@ -52,20 +52,20 @@ try {
     // do something e.g. "notify an administrator" something wrong with Apple setup
 }
 
+// initially this shoudl be an activation token
 // from https://gsx2[-uat].apple.com/gsx/api/login
 $token = 'activation-token';
 
-// will return a new authentication token
-// when called with no arguments
-// an expired authentication token, which should be refreshed
+// when given an activation token, will return a new authentication token
+// when given an expired/current token, will refresh the token
 try {
     // will return an authentication token
     $authToken = $gsx->authenticate()->token($token);
 
     // or throw an `UnauthorizedException` if `token` is invalid
 } catch (UnauthorizedException $e) {
-    // if previously authenticated pass the old `token`
-    // otherwise an activation token is required
+    // if previously authenticated pass the old `authentication token`
+    // otherwise a new `activation token` is required
     $authToken = $gsx->authenticate()->token($token);
 }
 
