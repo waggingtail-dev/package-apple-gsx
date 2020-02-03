@@ -23,5 +23,5 @@ echo "Releasing $VERSION";
 
 (
     git tag $VERSION
-    git push origin --all
+    git push origin --tags
 )
