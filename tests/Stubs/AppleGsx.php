@@ -20,10 +20,11 @@ class AppleGsx implements AppleGsxInterface
         $soldTo,
         $shipTo,
         $caBundlePath,
-        $passPhrase = null
+        $passPhrase = null,
+        $useUat = false
     )
     {
-        $this->config = new Config($soldTo, $shipTo, $caBundlePath, $passPhrase);
+        $this->config = new Config($soldTo, $shipTo, $caBundlePath, $passPhrase, $useUat);
     }
 
     /**

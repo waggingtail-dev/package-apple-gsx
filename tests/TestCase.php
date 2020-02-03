@@ -19,13 +19,13 @@ class TestCase extends BaseTestCase
             getenv('APPLE_GSX_SHIP_TO'),
             getenv('APPLE_GSX_SOLD_TO'),
             __DIR__ . '/data/ca-bundle.pem',
-            '012345'
+            '012345',
+            true
         );
 
         $config = static::$gsx->getConfig();
 
-        $config->useUat()
-            ->setAppleUserId('appleid@sample.com')
+        $config->setAppleUserId('appleid@sample.com')
             ->setToken('authentication-token');
     }
 }

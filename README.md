@@ -28,16 +28,13 @@ Invoking the /authenticate/token API too often – for example, invoking it befo
 ## Usage
 
 ```php
-$gsx = new \Waggingtail\AppleGsx\AppleGsx($soldTo, $shipTo, $caBundlePath, $passPhrase);
+$gsx = new \Waggingtail\AppleGsx\AppleGsx($soldTo, $shipTo, $caBundlePath, $passPhrase, $useUat);
 
 // get the configuration instance
 $config = $gsx->getConfig();
 
 // this is required to authenticate
 $config->setAppleUserId('appleid@sample.com');
-
-// when developing, this is useful for making API calls against GSX's uat environment
-$config->useUat();
 
 // this will set X-Apple-Operator-User-ID, this should be a unique identifier from your app
 // this is optional, but recommended as this allows Apple to store information about who the operator was
@@ -63,7 +60,7 @@ try {
     // will return an authentication token
     $authToken = $gsx->authenticate()->token($activationToken);
     
-    // example storing the token
+    // this is just an example, the implementation is irrelevant
     Auth::user()->saveAppleGsxToken($authToken);
 
     // or throw an `UnauthorizedException` if `token` is invalid

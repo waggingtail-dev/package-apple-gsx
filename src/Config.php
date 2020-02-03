@@ -80,16 +80,23 @@ class Config implements ConfigInterface
     /**
      * {@inheritdoc}
      */
-    public function __construct($shipTo, $soldTo, $caBundlePath, $passPhrase = null)
+    public function __construct(
+        $soldTo,
+        $shipTo,
+        $caBundlePath,
+        $passPhrase = null,
+        $useUat = false)
     {
-        $this->setShipTo($shipTo);
-
         $this->setSoldTo($soldTo);
+
+        $this->setShipTo($shipTo);
 
         $this->setCaBundlePath(
             $caBundlePath,
             $passPhrase
         );
+
+        $this->useUat($useUat);
     }
 
     /**
@@ -251,9 +258,9 @@ class Config implements ConfigInterface
     /**
      * {@inheritdoc}
      */
-    public function useUat()
+    public function useUat(bool $uat = true)
     {
-        $this->isUat = true;
+        $this->isUat = $uat;
 
         return $this;
     }

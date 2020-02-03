@@ -20,18 +20,20 @@ interface AppleGsxInterface
      * @param string $soldTo The value for X-Apple-SoldTo header.
      * @param string $shipTo The value for X-Apple-ShipTo header.
      * @param string $caBundlePath The path to the client certificate.
-     * @param null|string $passPhrase [optional] The passphrase for the client certificate.
+     * @param string $passPhrase The passphrase for the client certificate.
+     * @param bool $useUat When true will use Apple GSX UAT environment, production otherwise.
      */
     public function __construct(
         $soldTo,
         $shipTo,
         $caBundlePath,
-        $passPhrase = null);
+        $passPhrase,
+        $useUat);
 
     /**
      * Get the Config instance.
      *
-     * @return AppleGsxInterface
+     * @return ConfigInterface
      */
     public function getConfig();
 

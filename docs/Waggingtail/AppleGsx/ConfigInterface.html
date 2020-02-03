@@ -99,7 +99,7 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___construct">__construct</a>(string $shipTo, string $soldTo, string $caBundlePath, null|string $passPhrase = null)
+                    <a href="#method___construct">__construct</a>(string $soldTo, string $shipTo, string $caBundlePath, string $passPhrase, boolean $useUat)
         
                                             <p>Config constructor.</p>                </div>
                 <div class="col-md-2"></div>
@@ -259,9 +259,9 @@
                     <a href="../../Waggingtail/AppleGsx/ConfigInterface.html"><abbr title="Waggingtail\AppleGsx\ConfigInterface">ConfigInterface</abbr></a>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_useUat">useUat</a>()
+                    <a href="#method_useUat">useUat</a>(bool $uat = true)
         
-                                            <p>Set the environment to UAT.</p>                </div>
+                                            <p>Set the environment.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -272,9 +272,9 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         line 23</div>
+        <div class="location">at         line 24</div>
         <code>                    
-    <strong>__construct</strong>(string $shipTo, string $soldTo, string $caBundlePath, null|string $passPhrase = null)
+    <strong>__construct</strong>(string $soldTo, string $shipTo, string $caBundlePath, string $passPhrase, boolean $useUat)
         </code>
     </h3>
     <div class="details">
@@ -289,13 +289,13 @@
                     <table class="table table-condensed">
                     <tr>
                 <td>string</td>
-                <td>$shipTo</td>
-                <td>The value for X-Apple-ShipTo header.</td>
+                <td>$soldTo</td>
+                <td>The value for X-Apple-SoldTo header.</td>
             </tr>
                     <tr>
                 <td>string</td>
-                <td>$soldTo</td>
-                <td>The value for X-Apple-SoldTo header.</td>
+                <td>$shipTo</td>
+                <td>The value for X-Apple-ShipTo header.</td>
             </tr>
                     <tr>
                 <td>string</td>
@@ -303,9 +303,14 @@
                 <td>The path to the client certificate.</td>
             </tr>
                     <tr>
-                <td>null|string</td>
+                <td>string</td>
                 <td>$passPhrase</td>
-                <td>[optional] The passphrase for the client certificate.</td>
+                <td>The passphrase for the client certificate.</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$useUat</td>
+                <td>When true will use Apple GSX UAT environment.</td>
             </tr>
             </table>
 
@@ -318,7 +323,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getToken">
-        <div class="location">at         line 35</div>
+        <div class="location">at         line 37</div>
         <code>                    mixed
     <strong>getToken</strong>()
         </code>
@@ -348,7 +353,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setToken">
-        <div class="location">at         line 43</div>
+        <div class="location">at         line 45</div>
         <code>                    <a href="../../Waggingtail/AppleGsx/ConfigInterface.html"><abbr title="Waggingtail\AppleGsx\ConfigInterface">ConfigInterface</abbr></a>
     <strong>setToken</strong>(string $token)
         </code>
@@ -388,7 +393,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getApiBaseUrl">
-        <div class="location">at         line 50</div>
+        <div class="location">at         line 52</div>
         <code>                    string
     <strong>getApiBaseUrl</strong>()
         </code>
@@ -418,7 +423,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getAppleUserId">
-        <div class="location">at         line 57</div>
+        <div class="location">at         line 59</div>
         <code>                    string
     <strong>getAppleUserId</strong>()
         </code>
@@ -448,7 +453,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setAppleUserId">
-        <div class="location">at         line 65</div>
+        <div class="location">at         line 67</div>
         <code>                    <a href="../../Waggingtail/AppleGsx/ConfigInterface.html"><abbr title="Waggingtail\AppleGsx\ConfigInterface">ConfigInterface</abbr></a>
     <strong>setAppleUserId</strong>(string $appleUserId)
         </code>
@@ -488,7 +493,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getShipTo">
-        <div class="location">at         line 72</div>
+        <div class="location">at         line 74</div>
         <code>                    string
     <strong>getShipTo</strong>()
         </code>
@@ -518,7 +523,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setShipTo">
-        <div class="location">at         line 80</div>
+        <div class="location">at         line 82</div>
         <code>                    <a href="../../Waggingtail/AppleGsx/ConfigInterface.html"><abbr title="Waggingtail\AppleGsx\ConfigInterface">ConfigInterface</abbr></a>
     <strong>setShipTo</strong>(string $shipTo)
         </code>
@@ -558,7 +563,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getSoldTo">
-        <div class="location">at         line 87</div>
+        <div class="location">at         line 89</div>
         <code>                    string
     <strong>getSoldTo</strong>()
         </code>
@@ -588,7 +593,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setSoldTo">
-        <div class="location">at         line 95</div>
+        <div class="location">at         line 97</div>
         <code>                    <a href="../../Waggingtail/AppleGsx/ConfigInterface.html"><abbr title="Waggingtail\AppleGsx\ConfigInterface">ConfigInterface</abbr></a>
     <strong>setSoldTo</strong>(string $soldTo)
         </code>
@@ -628,7 +633,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getCaBundlePath">
-        <div class="location">at         line 102</div>
+        <div class="location">at         line 104</div>
         <code>                    mixed
     <strong>getCaBundlePath</strong>()
         </code>
@@ -658,7 +663,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setCaBundlePath">
-        <div class="location">at         line 111</div>
+        <div class="location">at         line 113</div>
         <code>                    <a href="../../Waggingtail/AppleGsx/ConfigInterface.html"><abbr title="Waggingtail\AppleGsx\ConfigInterface">ConfigInterface</abbr></a>
     <strong>setCaBundlePath</strong>(string $caBundlePath, null|string $passPhrase = null)
         </code>
@@ -703,7 +708,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getPassPhrase">
-        <div class="location">at         line 118</div>
+        <div class="location">at         line 120</div>
         <code>                    mixed
     <strong>getPassPhrase</strong>()
         </code>
@@ -733,7 +738,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getOperatorUserId">
-        <div class="location">at         line 125</div>
+        <div class="location">at         line 127</div>
         <code>                    mixed
     <strong>getOperatorUserId</strong>()
         </code>
@@ -763,7 +768,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setOperatorUserId">
-        <div class="location">at         line 133</div>
+        <div class="location">at         line 135</div>
         <code>                    <a href="../../Waggingtail/AppleGsx/ConfigInterface.html"><abbr title="Waggingtail\AppleGsx\ConfigInterface">ConfigInterface</abbr></a>
     <strong>setOperatorUserId</strong>(string $operatorUserId)
         </code>
@@ -803,7 +808,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isUat">
-        <div class="location">at         line 140</div>
+        <div class="location">at         line 142</div>
         <code>                    bool
     <strong>isUat</strong>()
         </code>
@@ -833,9 +838,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_useUat">
-        <div class="location">at         line 147</div>
+        <div class="location">at         line 150</div>
         <code>                    <a href="../../Waggingtail/AppleGsx/ConfigInterface.html"><abbr title="Waggingtail\AppleGsx\ConfigInterface">ConfigInterface</abbr></a>
-    <strong>useUat</strong>()
+    <strong>useUat</strong>(bool $uat = true)
         </code>
     </h3>
     <div class="details">
@@ -843,8 +848,18 @@
     
 
                     <div class="method-description">
-                                    <p>Set the environment to UAT.</p>                                                </div>
+                                    <p>Set the environment.</p>                                                </div>
                 <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$uat</td>
+                <td>When true will use Apple GSX UAT environment, production otherwise.</td>
+            </tr>
+            </table>
+
             
                             <h4>Return Value</h4>
 
