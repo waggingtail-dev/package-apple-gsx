@@ -3,7 +3,7 @@
 namespace Waggingtail\AppleGsx\Exception;
 
 /**
- * UnauthorizedRequest.
+ * Unauthorized Exception.
  *
  * @package Waggingtail\AppleGsx\Exception
  * @license BSD License (3-Clause)

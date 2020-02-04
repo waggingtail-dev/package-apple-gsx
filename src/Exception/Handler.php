@@ -41,7 +41,7 @@ class Handler
                                        $statusCode,
                                        $rawOutput)
     {
-        if (in_array($statusCode, $this->exceptionsByStatusCode)) {
+        if (array_key_exists($statusCode, $this->exceptionsByStatusCode)) {
             $class = $this->exceptionsByStatusCode[$statusCode];
         } else {
             $class = 'AppleGsx';
