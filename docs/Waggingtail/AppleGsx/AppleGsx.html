@@ -94,7 +94,7 @@
             <table class="table table-condensed">
                     <tr>
                 <td class="type" id="property_config">
-                                        protected                                        <a href="../../Waggingtail/AppleGsx/ConfigInterface.html"><abbr title="Waggingtail\AppleGsx\ConfigInterface">ConfigInterface</abbr></a>
+                                        protected                                        <a href="../../Waggingtail/AppleGsx/Contracts/ConfigInterface.html"><abbr title="Waggingtail\AppleGsx\Contracts\ConfigInterface">ConfigInterface</abbr></a>
                 </td>
                 <td>$config</td>
                 <td class="last">The Config instance.</td>
@@ -111,14 +111,14 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___construct">__construct</a>(string $soldTo, string $shipTo, string $caBundlePath, string $passPhrase = null, bool $useUat = false)
+                    <a href="#method___construct">__construct</a>(string $appleUserId, string $soldTo, string $shipTo, string $caBundlePath, string $passPhrase = null, bool $useUat = false)
         
                                             <p>AppleGsx constructor.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../../Waggingtail/AppleGsx/ConfigInterface.html"><abbr title="Waggingtail\AppleGsx\ConfigInterface">ConfigInterface</abbr></a>
+                    <a href="../../Waggingtail/AppleGsx/Contracts/ConfigInterface.html"><abbr title="Waggingtail\AppleGsx\Contracts\ConfigInterface">ConfigInterface</abbr></a>
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getConfig">getConfig</a>()
@@ -131,9 +131,19 @@
                     <a href="../../Waggingtail/AppleGsx/Contracts/AppleGsxInterface.html"><abbr title="Waggingtail\AppleGsx\Contracts\AppleGsxInterface">AppleGsxInterface</abbr></a>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setConfig">setConfig</a>(<a href="../../Waggingtail/AppleGsx/ConfigInterface.html"><abbr title="Waggingtail\AppleGsx\ConfigInterface">ConfigInterface</abbr></a> $config)
+                    <a href="#method_setConfig">setConfig</a>(<a href="../../Waggingtail/AppleGsx/Contracts/ConfigInterface.html"><abbr title="Waggingtail\AppleGsx\Contracts\ConfigInterface">ConfigInterface</abbr></a> $config)
         
                                             <p>Set the Config instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Waggingtail/AppleGsx/Contracts/AppleGsxInterface.html"><abbr title="Waggingtail\AppleGsx\Contracts\AppleGsxInterface">AppleGsxInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setOperatorUserId">setOperatorUserId</a>(string $operatorUserId)
+        
+                                            <p>Set the operator ID.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -164,9 +174,9 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         line 23</div>
+        <div class="location">at         line 24</div>
         <code>                    
-    <strong>__construct</strong>(string $soldTo, string $shipTo, string $caBundlePath, string $passPhrase = null, bool $useUat = false)
+    <strong>__construct</strong>(string $appleUserId, string $soldTo, string $shipTo, string $caBundlePath, string $passPhrase = null, bool $useUat = false)
         </code>
     </h3>
     <div class="details">
@@ -179,6 +189,11 @@
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$appleUserId</td>
+                <td>The apple id to use in the authentication flow.</td>
+            </tr>
                     <tr>
                 <td>string</td>
                 <td>$soldTo</td>
@@ -215,8 +230,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getConfig">
-        <div class="location">at         line 37</div>
-        <code>                    <a href="../../Waggingtail/AppleGsx/ConfigInterface.html"><abbr title="Waggingtail\AppleGsx\ConfigInterface">ConfigInterface</abbr></a>
+        <div class="location">at         line 39</div>
+        <code>                    <a href="../../Waggingtail/AppleGsx/Contracts/ConfigInterface.html"><abbr title="Waggingtail\AppleGsx\Contracts\ConfigInterface">ConfigInterface</abbr></a>
     <strong>getConfig</strong>()
         </code>
     </h3>
@@ -232,7 +247,7 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../Waggingtail/AppleGsx/ConfigInterface.html"><abbr title="Waggingtail\AppleGsx\ConfigInterface">ConfigInterface</abbr></a></td>
+            <td><a href="../../Waggingtail/AppleGsx/Contracts/ConfigInterface.html"><abbr title="Waggingtail\AppleGsx\Contracts\ConfigInterface">ConfigInterface</abbr></a></td>
             <td></td>
         </tr>
     </table>
@@ -245,9 +260,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setConfig">
-        <div class="location">at         line 45</div>
+        <div class="location">at         line 47</div>
         <code>                    <a href="../../Waggingtail/AppleGsx/Contracts/AppleGsxInterface.html"><abbr title="Waggingtail\AppleGsx\Contracts\AppleGsxInterface">AppleGsxInterface</abbr></a>
-    <strong>setConfig</strong>(<a href="../../Waggingtail/AppleGsx/ConfigInterface.html"><abbr title="Waggingtail\AppleGsx\ConfigInterface">ConfigInterface</abbr></a> $config)
+    <strong>setConfig</strong>(<a href="../../Waggingtail/AppleGsx/Contracts/ConfigInterface.html"><abbr title="Waggingtail\AppleGsx\Contracts\ConfigInterface">ConfigInterface</abbr></a> $config)
         </code>
     </h3>
     <div class="details">
@@ -261,7 +276,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="../../Waggingtail/AppleGsx/ConfigInterface.html"><abbr title="Waggingtail\AppleGsx\ConfigInterface">ConfigInterface</abbr></a></td>
+                <td><a href="../../Waggingtail/AppleGsx/Contracts/ConfigInterface.html"><abbr title="Waggingtail\AppleGsx\Contracts\ConfigInterface">ConfigInterface</abbr></a></td>
                 <td>$config</td>
                 <td></td>
             </tr>
@@ -284,8 +299,48 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_setOperatorUserId">
+        <div class="location">at         line 60</div>
+        <code>                    <a href="../../Waggingtail/AppleGsx/Contracts/AppleGsxInterface.html"><abbr title="Waggingtail\AppleGsx\Contracts\AppleGsxInterface">AppleGsxInterface</abbr></a>
+    <strong>setOperatorUserId</strong>(string $operatorUserId)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the operator ID.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$operatorUserId</td>
+                <td>For X-Apple-Operator-User-ID header.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Waggingtail/AppleGsx/Contracts/AppleGsxInterface.html"><abbr title="Waggingtail\AppleGsx\Contracts\AppleGsxInterface">AppleGsxInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method___call">
-        <div class="location">at         line 61</div>
+        <div class="location">at         line 76</div>
         <code>                    <a href="../../Waggingtail/AppleGsx/Contracts/ApiInterface.html"><abbr title="Waggingtail\AppleGsx\Contracts\ApiInterface">ApiInterface</abbr></a>
     <strong>__call</strong>(string $name, array $arguments = [])
         </code>
@@ -339,7 +394,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getApiInstance">
-        <div class="location">at         line 75</div>
+        <div class="location">at         line 90</div>
         <code>            protected        <a href="../../Waggingtail/AppleGsx/Contracts/ApiInterface.html"><abbr title="Waggingtail\AppleGsx\Contracts\ApiInterface">ApiInterface</abbr></a>
     <strong>getApiInstance</strong>(string $name)
         </code>
@@ -376,11 +431,11 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a target="_blank" href="http://php.net/BadMethodCallException">BadMethodCallException</a></td>
+                <td><a target="_blank" href="http://php.net/ReflectionException">ReflectionException</a></td>
                 <td></td>
             </tr>
                     <tr>
-                <td><a target="_blank" href="http://php.net/ReflectionException">ReflectionException</a></td>
+                <td><a target="_blank" href="http://php.net/BadMethodCallException">BadMethodCallException</a></td>
                 <td></td>
             </tr>
             </table>

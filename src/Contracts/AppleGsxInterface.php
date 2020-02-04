@@ -2,8 +2,6 @@
 
 namespace Waggingtail\AppleGsx\Contracts;
 
-use Waggingtail\AppleGsx\ConfigInterface;
-
 /**
  * AppleGsx.
  *
@@ -17,6 +15,7 @@ interface AppleGsxInterface
     /**
      * AppleGsx constructor.
      *
+     * @param string $appleUserId The apple id to use in the authentication flow.
      * @param string $soldTo The value for X-Apple-SoldTo header.
      * @param string $shipTo The value for X-Apple-ShipTo header.
      * @param string $caBundlePath The path to the client certificate.
@@ -24,6 +23,7 @@ interface AppleGsxInterface
      * @param bool $useUat When true will use Apple GSX UAT environment, production otherwise.
      */
     public function __construct(
+        $appleUserId,
         $soldTo,
         $shipTo,
         $caBundlePath,

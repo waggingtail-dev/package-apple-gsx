@@ -3,7 +3,7 @@
 namespace Waggingtail\AppleGsx\Tests\Stubs;
 
 use Waggingtail\AppleGsx\Config;
-use Waggingtail\AppleGsx\ConfigInterface;
+use Waggingtail\AppleGsx\Contracts\ConfigInterface;
 use Waggingtail\AppleGsx\Contracts\AppleGsxInterface;
 
 class AppleGsx implements AppleGsxInterface
@@ -17,6 +17,7 @@ class AppleGsx implements AppleGsxInterface
      * {@inheritdoc}
      */
     public function __construct(
+        $appleUserId,
         $soldTo,
         $shipTo,
         $caBundlePath,
@@ -24,7 +25,7 @@ class AppleGsx implements AppleGsxInterface
         $useUat = false
     )
     {
-        $this->config = new Config($soldTo, $shipTo, $caBundlePath, $passPhrase, $useUat);
+        $this->config = new Config($appleUserId, $soldTo, $shipTo, $caBundlePath, $passPhrase, $useUat);
     }
 
     /**

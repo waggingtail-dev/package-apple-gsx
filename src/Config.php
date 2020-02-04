@@ -2,6 +2,8 @@
 
 namespace Waggingtail\AppleGsx;
 
+use Waggingtail\AppleGsx\Contracts\ConfigInterface;
+
 /**
  * AppleGsx.
  *
@@ -81,12 +83,15 @@ class Config implements ConfigInterface
      * {@inheritdoc}
      */
     public function __construct(
+        $appleUserId,
         $soldTo,
         $shipTo,
         $caBundlePath,
         $passPhrase = null,
         $useUat = false)
     {
+        $this->setAppleUserId($appleUserId);
+
         $this->setSoldTo($soldTo);
 
         $this->setShipTo($shipTo);

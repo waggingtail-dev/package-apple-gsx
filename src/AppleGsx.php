@@ -7,6 +7,7 @@ use ReflectionClass;
 use ReflectionException;
 use Waggingtail\AppleGsx\Contracts\ApiInterface;
 use Waggingtail\AppleGsx\Contracts\AppleGsxInterface;
+use Waggingtail\AppleGsx\Contracts\ConfigInterface;
 
 class AppleGsx implements AppleGsxInterface
 {
@@ -21,6 +22,7 @@ class AppleGsx implements AppleGsxInterface
      * {@inheritdoc}
      */
     public function __construct(
+        $appleUserId,
         $soldTo,
         $shipTo,
         $caBundlePath,
@@ -28,7 +30,7 @@ class AppleGsx implements AppleGsxInterface
         $useUat = false
     )
     {
-        $this->config = new Config($soldTo, $shipTo, $caBundlePath, $passPhrase, $useUat);
+        $this->config = new Config($appleUserId, $soldTo, $shipTo, $caBundlePath, $passPhrase, $useUat);
     }
 
     /**
@@ -50,13 +52,26 @@ class AppleGsx implements AppleGsxInterface
     }
 
     /**
+     * Set the operator ID.
+     *
+     * @param mixed $operatorUserId For X-Apple-Operator-User-ID header.
+     * @return AppleGsxInterface
+     */
+    public function setOperatorUserId(string $operatorUserId)
+    {
+        $this->config->setOperatorUserId($operatorUserId);
+
+        return $this;
+    }
+
+    /**
      * Dynamically handles API calls.
      *
      * @param string $name The method name.
      * @param array $arguments [optional] Method arguments.
+     * @return ApiInterface
      * @throws ReflectionException
      *
-     * @return ApiInterface
      */
     public function __call($name, array $arguments = [])
     {
@@ -67,16 +82,16 @@ class AppleGsx implements AppleGsxInterface
      * Returns the API class instance for the given method.
      *
      * @param string $name The method name.
-     * @throws BadMethodCallException
+     * @return ApiInterface
      * @throws ReflectionException
      *
-     * @return ApiInterface
+     * @throws BadMethodCallException
      */
     protected function getApiInstance($name)
     {
         $class = "\\Waggingtail\\AppleGsx\\Api\\" . ucwords($name);
 
-        if (class_exists($class) && ! (new ReflectionClass($class))->isAbstract()) {
+        if (class_exists($class) && !(new ReflectionClass($class))->isAbstract()) {
             return new $class($this->config);
         }
 

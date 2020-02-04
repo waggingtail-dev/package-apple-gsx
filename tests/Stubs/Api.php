@@ -3,7 +3,7 @@
 namespace Waggingtail\AppleGsx\Tests\Stubs;
 
 use GuzzleHttp\Client;
-use Waggingtail\AppleGsx\ConfigInterface;
+use Waggingtail\AppleGsx\Contracts\ConfigInterface;
 use Waggingtail\AppleGsx\Contracts\ApiInterface;
 
 class Api implements ApiInterface
@@ -26,7 +26,7 @@ class Api implements ApiInterface
     /**
      * Gets the default headers that are sent with every request.
      *
-     * @return array Default headers.
+     * @return void Default headers.
      */
     public function getDefaultHeaders()
     {
@@ -37,7 +37,7 @@ class Api implements ApiInterface
      * Sets the default headers that are sent with every request.
      *
      * @param array $headers Null or '' values will be removed from default headers.
-     * @return ApiInterface
+     * @return void
      */
     public function setDefaultHeaders(array $headers = [])
     {
@@ -47,7 +47,7 @@ class Api implements ApiInterface
     /**
      * Returns the number of items to return per page.
      *
-     * @return int Number of items per page.
+     * @return void Number of items per page.
      */
     public function getPageSize()
     {
@@ -58,7 +58,7 @@ class Api implements ApiInterface
      * Sets the number of items to return per page.
      *
      * @param int $pageSize How many results per page, if not set, defaults to 50.
-     * @return ApiInterface
+     * @return void
      */
     public function setPageSize($pageSize)
     {
@@ -68,7 +68,7 @@ class Api implements ApiInterface
     /**
      * Returns the page number.
      *
-     * @return int Current page number.
+     * @return void Current page number.
      */
     public function getPageNumber()
     {
@@ -79,7 +79,7 @@ class Api implements ApiInterface
      * Sets the page number.
      *
      * @param int $pageNumber Represents the page to return, if not set, defaults to first page.
-     * @return ApiInterface
+     * @return void
      */
     public function setPageNumber($pageNumber)
     {
@@ -116,7 +116,7 @@ class Api implements ApiInterface
     /**
      * Returns an Http client instance.
      *
-     * @return Client
+     * @return void
      */
     public function getClient()
     {

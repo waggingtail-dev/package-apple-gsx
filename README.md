@@ -28,17 +28,11 @@ Invoking the /authenticate/token API too often – for example, invoking it befo
 ## Usage
 
 ```php
-$gsx = new \Waggingtail\AppleGsx\AppleGsx($soldTo, $shipTo, $caBundlePath, $passPhrase, $useUat);
-
-// get the configuration instance
-$config = $gsx->getConfig();
-
-// this is required to authenticate
-$config->setAppleUserId('appleid@sample.com');
+$gsx = new \Waggingtail\AppleGsx\AppleGsx($appleUserId, $soldTo, $shipTo, $caBundlePath, $passPhrase, $useUat);
 
 // this will set X-Apple-Operator-User-ID, this should be a unique identifier from your app
 // this is optional, but recommended as this allows Apple to store information about who the operator was
-$config->setOperatorUserId('sjohnson');
+$gsx->setOperatorUserId('sjohnson');
 
 try {
     // will return "OK" only if (IP whitelisted, valid certificate etc)
@@ -55,13 +49,12 @@ $activationToken = 'activation-token';
 
 // when given an activation token, will return a new authentication token
 // when given an expired/current token, will refresh the token
-// CALL THIS ONCE and store the `authentication token` e.g. "against the user"
 try {
     // will return an authentication token
     $authToken = $gsx->authenticate()->token($activationToken);
     
-    // this is just an example, the implementation is irrelevant
-    Auth::user()->saveAppleGsxToken($authToken);
+    // store the token, implementaion is up to you.
+    Cache::put('gsxAuthToken', $authToken, $ttl);
 
     // or throw an `UnauthorizedException` if `token` is invalid
 } catch (UnauthorizedException $e) {
@@ -74,10 +67,12 @@ try {
     $gsx->repair()->details($repairId);
     // if UnauthorizedException thrown, authenticate with the current/expired token
 } catch (UnauthorizedException $e) {
-    // example retrieving the current token
-    $currentToken = Auth::user()->getAppleGsxToken();
+    // retrieve current/expired token from cache, implementation is up to you
+    $currentToken = Cache::get('gsxAuthToken');
 
-    // if this fails, you'll need a new activation-token
     $authToken = $gsx->authenticate()->token($currentToken);
+
+    // Update the cache key with new token
+    Cache::put('gsxAuthToken', $authToken, $ttl); 
 }
 ```

@@ -16,6 +16,7 @@ class TestCase extends BaseTestCase
     public static function setUpBeforeClass(): void
     {
         static::$gsx = new AppleGsx(
+            getenv('APPLE_GSX_APPLE_USER_ID'),
             getenv('APPLE_GSX_SHIP_TO'),
             getenv('APPLE_GSX_SOLD_TO'),
             __DIR__ . '/data/ca-bundle.pem',

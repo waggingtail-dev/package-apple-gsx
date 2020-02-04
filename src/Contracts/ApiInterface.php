@@ -3,8 +3,7 @@
 namespace Waggingtail\AppleGsx\Contracts;
 
 use GuzzleHttp\Client;
-use Waggingtail\AppleGsx\ConfigInterface;
-use Waggingtail\AppleGsx\Exception\AppleGsxException;
+use Waggingtail\AppleGsx\Contracts\ConfigInterface;
 
 /**
  * Api Interface.

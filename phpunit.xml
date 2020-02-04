@@ -20,8 +20,8 @@
         </whitelist>
     </filter>
     <php>
+        <env name="APPLE_GSX_APPLE_USER_ID" value="appleid@sample.com"/>
         <env name="APPLE_GSX_SOLD_TO" value="01234567"/>
         <env name="APPLE_GSX_SHIP_TO" value="01234567"/>
-        <env name="APPLE_GSX_USER_ID" value="sample@sample.com"/>
     </php>
 </phpunit>
