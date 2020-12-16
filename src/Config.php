@@ -33,7 +33,7 @@ class Config implements ConfigInterface
      *
      * @var string
      */
-    protected $apiBaseUrl = 'https://partner-connect%s.apple.com/gsx/api/';
+    protected $apiBaseUrl = 'https://api-partner-connect%s.apple.com/gsx/api';
 
     /**
      * X-Apple-ShipTo.
