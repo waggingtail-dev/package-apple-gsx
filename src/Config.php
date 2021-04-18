@@ -35,7 +35,7 @@ class Config implements ConfigInterface
      */
     # protected $apiBaseUrl = 'https://partner-connect%s.apple.com/gsx/api/';
 
-    protected $apiBaseUrl = 'https://api-partner-connect%s.apple.com/gsx/api/';
+    protected $apiBaseUrl = 'https://api-partner-connect%s.apple.com/api/';
 
 
     /**
