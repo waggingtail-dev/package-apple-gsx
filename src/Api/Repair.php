@@ -19,7 +19,7 @@ class Repair extends Api implements RepairInterface
      */
     public function eligibility(array $json)
     {
-        return $this->_post("repair/eligibility", $json);
+        return $this->_post("/gsx/api/repair/eligibility", $json);
     }
 
     /**
@@ -27,7 +27,7 @@ class Repair extends Api implements RepairInterface
      */
     public function details($repairId)
     {
-        return $this->_get("repair/details?repairId={$repairId}");
+        return $this->_get("/gsx/api/repair/details?repairId={$repairId}");
     }
 
     /**
@@ -37,7 +37,7 @@ class Repair extends Api implements RepairInterface
     {
         $parameters['fetchAllRepairs'] = $fetchAllRepairs;
 
-        return $this->_post("repair/summary", $json, $parameters);
+        return $this->_post("/gsx/api/repair/summary", $json, $parameters);
     }
 
     /**
@@ -47,6 +47,6 @@ class Repair extends Api implements RepairInterface
     {
         $parameters['activationDetails'] = $activationDetails;
 
-        return $this->_post("repair/product/details", $json, $parameters);
+        return $this->_post("/gsx/api/repair/product/details", $json, $parameters);
     }
 }
