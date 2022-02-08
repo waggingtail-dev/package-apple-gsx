@@ -174,7 +174,7 @@ abstract class Api implements ApiInterface
             'Accept' => 'application/json',
             'Accept-Language' => 'en_US',
             'Content-Type' => 'application/json',
-            'X-Apple-Service-Version' => 'v2',
+            'X-Apple-Service-Version' => 'v3',
             'X-Apple-Auth-Token' => $this->config->getToken(),
             'X-Apple-ShipTo' => $this->config->getShipTo(),
             'X-Apple-SoldTo' => $this->config->getSoldTo(),
